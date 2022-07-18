@@ -1,8 +1,8 @@
 import React from 'react';
 import { Content, Wrapper } from './styles';
 import { CardProps } from '../types';
-import { Title, Text, Button } from '../theme';
-import { showFrame } from '../utils';
+import { Title, Text, Link } from '../theme';
+import { getUrl, urlParams } from '../utils';
 
 
 const Card:React.FC<CardProps> = ({title, price, text}) => {
@@ -12,7 +12,7 @@ const Card:React.FC<CardProps> = ({title, price, text}) => {
         <Title fontSize={'22px'}>{title}</Title>
         <Text>{text}</Text>
         <Title fontSize={'55px'}>{price}</Title>
-        <Button padding={'8px 32px'} onClick={() => showFrame()}>Transform to NFT</Button>
+        <Link href={getUrl(urlParams)}>Transform to NFT</Link>
       </Content>
     </Wrapper>
   );
