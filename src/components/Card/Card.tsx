@@ -12,7 +12,7 @@ const Card:React.FC<CardProps> = ({title, price, text, setIsSubPurchased}) => {
         <Title fontSize={'22px'}>{title}</Title>
         <Text>{text}</Text>
         <Title fontSize={'55px'}>{price}</Title>
-        <Button onClick={() => setIsSubPurchased(true)}>Transform to NFT</Button>
+        <Button onClick={() => setIsSubPurchased(true)}>Purchase</Button>
       </Content>
     </Wrapper>
   );
