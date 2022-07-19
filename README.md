@@ -1,2 +1,2 @@
 # Getting Started with Create React App
-Clean react typescript app with linter, prettier and husky
+https://la-merchant-mock-frontend2.vercel.app/
