@@ -38,7 +38,7 @@ const Content:React.FC<LoginProps> = ({ isUserLogged, setIsUserLogged }) => {
         isSubPurchased
           ? <>
             <Text>Subscription successfully purchased</Text>
-            <Link href={getUrl(urlParams)}>Transform to NFT</Link>
+            <Link href={getUrl(urlParams)} target='_blank'>Transform to NFT</Link>
           </>
           : <>
             <Title margin={0}>Choose your plan</Title>
