@@ -1,9 +1,7 @@
 import React from 'react';
 import { Content, Wrapper } from './styles';
 import { CardProps } from '../types';
-import { Title, Text, Link, Button } from '../theme';
-import { getUrl, urlParams } from '../utils';
-
+import { Title, Text, Button } from '../theme';
 
 const Card:React.FC<CardProps> = ({title, price, text, setIsSubPurchased}) => {
   return (

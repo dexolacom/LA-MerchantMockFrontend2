@@ -14,7 +14,7 @@ export const Button = styled.div<{background?: string, padding?: string}>`
   }
 `
 
-export const Link = styled.a<{background?: string, padding?: string}>`
+export const Link = styled.a<{background?: string, padding?: string, margin?: string}>`
   text-decoration: none;
   background-color: ${({background}) => background ?? '#ff3e1d'};
   padding: ${({padding}) => padding ?? '6px 16px'};
@@ -22,6 +22,7 @@ export const Link = styled.a<{background?: string, padding?: string}>`
   color: #fff;
   cursor: pointer;
   text-align: center;
+  margin: ${({margin}) => margin ?? '0'};;
 
   &:hover {
     background-color: ${({background}) => background ?? '#de3838'};;

@@ -1,27 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Title, Text, Link } from '../theme';
-import { Wrapper, CardsContainer } from './styles';
+import { Wrapper } from './styles';
 import { LoginProps } from '../types';
-import Card from '../Card/Card';
-import { getUrl, urlParams } from '../utils';
-
-const cardInfo = [
-  {
-    title: 'Basic',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Der mudo alofe mucho.',
-    price: '5$',
-  },
-  {
-    title: 'Premium',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Der mudo alofe mucho.',
-    price: '15$',
-  },
-  {
-    title: 'Ultimate',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Der mudo alofe mucho.',
-    price: '30$',
-  },
-];
+import { getUrl } from '../utils';
+import Cards from '../Cards/Cards';
 
 
 const Content:React.FC<LoginProps> = ({ isUserLogged, setIsUserLogged }) => {
@@ -38,15 +20,13 @@ const Content:React.FC<LoginProps> = ({ isUserLogged, setIsUserLogged }) => {
         isSubPurchased
           ? <>
             <Text>Subscription successfully purchased</Text>
-            <Link href={getUrl(urlParams)} target='_blank'>Transform to NFT</Link>
+            <Link href={getUrl()} target='_blank'>Transform to NFT</Link>
           </>
           : <>
+            <Link margin='0 0 48px 0' href={getUrl('activate')} target='_blank'>Activate subscription with LA</Link>
             <Title margin={0}>Choose your plan</Title>
-            <CardsContainer>
-              {cardInfo.map(({title, price, text}, index) => (
-                <Card key={index} title={title} price={price} text={text} setIsSubPurchased={setIsSubPurchased}/>
-              ))}
-            </CardsContainer>
+            {/*@ts-ignore*/}
+            <Cards setIsSubPurchased={setIsSubPurchased}/>
           </>
         : <>
           <Title>Connect to our merchant</Title>
