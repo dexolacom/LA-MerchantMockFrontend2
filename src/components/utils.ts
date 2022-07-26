@@ -13,11 +13,11 @@ const encryptParams = (str: string) => {
 export const getUrl = (activate?: string) => {
   let urlParams = `merchant=MerchantTwo&userId=${id()}&subscriptionId=${id()}`
 
-  const encryptedId = encryptParams(urlParams)
+  const encryptedLink = encryptParams(urlParams)
 
   if (activate) {
-    return `https://la-dashboard.vercel.app/_*${encryptedId}&activate=true`;
+    return `https://la-dashboard.vercel.app/_*${encryptedLink}&activate`;
   }
 
-  return `https://la-dashboard.vercel.app/_*${encryptedId}`;
+  return `https://la-dashboard.vercel.app/_*${encryptedLink}&mint`;
 }
