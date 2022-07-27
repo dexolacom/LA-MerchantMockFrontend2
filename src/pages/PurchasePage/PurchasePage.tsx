@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Title, Text, Link } from '../theme';
+import { Title, Text, Link } from '../../components/theme'
 import { Wrapper } from './styles';
-import { LoginProps } from '../types';
-import { getUrl } from '../utils';
-import Cards from '../Cards/Cards';
+import { LoginProps } from '../../components/types';
+import { getUrl } from '../../components/utils';
+import Cards from '../../components/Cards/Cards';
 
 
-const Content:React.FC<LoginProps> = ({ isUserLogged, setIsUserLogged }) => {
+const PurchasePage:React.FC<LoginProps> = ({ isUserLogged, setIsUserLogged }) => {
   const [isSubPurchased, setIsSubPurchased] = useState(false)
 
   useEffect(() => {
@@ -40,4 +40,4 @@ const Content:React.FC<LoginProps> = ({ isUserLogged, setIsUserLogged }) => {
   );
 };
 
-export default Content;
+export default PurchasePage;

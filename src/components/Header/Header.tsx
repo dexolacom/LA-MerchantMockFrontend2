@@ -29,7 +29,10 @@ const Header:React.FC<LoginProps> = ({isUserLogged, setIsUserLogged}) => {
 
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem('userData') as string)
-    setUserName(data?.username)
+    if (data) {
+      setUserName(data?.username)
+      setIsUserLogged(true)
+    }
   }, [isUserLogged]);
 
 

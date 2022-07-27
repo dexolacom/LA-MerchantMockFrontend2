@@ -21,7 +21,6 @@ const cardInfo = [
 ];
 
 
-
 // @ts-ignore
 const Cards:React.FC = ({ setIsSubPurchased }:{setIsSubPurchased: (b: boolean) => void}) => {
   return (
