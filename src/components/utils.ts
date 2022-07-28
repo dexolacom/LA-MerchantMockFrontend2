@@ -1,6 +1,6 @@
 import AES from 'crypto-js/aes';
 
-const id = () => Math.floor(Math.random() * 101)
+const id = () => Math.floor(Math.random() * 1011)
 
 const encryptParams = (str: string) => {
   // const ciphertext = AES.encrypt(str, 'secretPassphrase');
