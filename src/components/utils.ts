@@ -1,13 +1,11 @@
 import AES from 'crypto-js/aes';
-import { enc } from 'crypto-js';
 
 const id = () => Math.floor(Math.random() * 101)
 
-// export const urlParams = `merchant=MerchantTwo&userId=${uid()}&subscriptionId=${uid()}`
-
 const encryptParams = (str: string) => {
-  const ciphertext = AES.encrypt(str, 'secretPassphrase');
-  return encodeURIComponent(ciphertext.toString());
+  // const ciphertext = AES.encrypt(str, 'secretPassphrase');
+  // return encodeURIComponent(ciphertext.toString());
+  return AES.encrypt(JSON.stringify({ str }), 'secret').toString();
 }
 
 export const getUrl = (activate?: string) => {
@@ -20,4 +18,5 @@ export const getUrl = (activate?: string) => {
   }
 
   return `https://la-dashboard.vercel.app/_*${encryptedLink}&mint`;
+  // return `http://localhost:3001/_*${encryptedLink}/mint`;
 }

@@ -19,7 +19,7 @@ const PurchasePage:React.FC<LoginProps> = ({ isUserLogged, setIsUserLogged }) =>
       {isUserLogged ?
         isSubPurchased
           ? <>
-            <Text>Subscription successfully purchased</Text>
+            <Text margin='0 0 16px 0'>Subscription successfully purchased</Text>
             <Link href={getUrl()} target='_blank'>Transform to NFT</Link>
           </>
           : <>
