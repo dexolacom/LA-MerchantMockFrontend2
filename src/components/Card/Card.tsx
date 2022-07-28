@@ -8,7 +8,7 @@ const Card:React.FC<CardProps> = ({title, price, text, setIsSubPurchased}) => {
     <Wrapper>
       <Content>
         <Title fontSize={'22px'}>{title}</Title>
-        <Text>{text}</Text>
+        <Text margin='0 0 16px 0'>{text}</Text>
         <Title fontSize={'55px'}>{price}</Title>
         <Button onClick={() => setIsSubPurchased(true)}>Purchase</Button>
       </Content>

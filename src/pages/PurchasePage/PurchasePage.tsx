@@ -26,7 +26,7 @@ const PurchasePage:React.FC<LoginProps> = ({ isUserLogged, setIsUserLogged }) =>
             <LinkContainer>
               <Link href={getUrl('activate')} target='_blank'>Activate subscription with LA</Link>
             </LinkContainer>
-            <Title margin={0}>Choose your plan</Title>
+            <Title margin={0} fontSize='22px'>Choose your plan</Title>
             {/*@ts-ignore*/}
             <Cards setIsSubPurchased={setIsSubPurchased}/>
           </>

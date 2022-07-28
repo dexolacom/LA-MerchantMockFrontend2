@@ -17,6 +17,11 @@ export const InputsContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
+
 `
 
 export const Input = styled.input`
@@ -35,6 +40,11 @@ export const TitleContainer = styled.div`
   display: flex;
   gap: 40px;
   align-items: center;
+
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
+  
 `
 
 export const RouterNavLink = styled(NavLink)`
