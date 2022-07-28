@@ -29,14 +29,22 @@ export const Link = styled.a<{background?: string, padding?: string, margin?: st
   }
 `;
 
-export const Title = styled.h1<{color?: string, fontSize?: string, margin?: string | number}>`
+export const Title = styled.h3<{color?: string, fontSize?: string, margin?: string | number}>`
   font-size: ${({fontSize}) => fontSize ?? '#2c3f57'};
   color: ${({color}) => color ?? '#2c3f57'};
   margin: ${({margin}) => margin ?? '0 0 16px 0'};
 `
 
-export const Text = styled.p<{color?: string}>`
+export const Text = styled.span<{color?: string, margin?: string}>`
   font-size: 16px;
-  margin-bottom: 16px;
+  margin: ${({margin}) => margin ?? '0'};
   color: ${({color}) => color ?? '#2c3f57'};
+`
+
+export const FlexRow = styled.div<{margin?: string}>`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: ${({margin}) => margin ?? '0'};
 `

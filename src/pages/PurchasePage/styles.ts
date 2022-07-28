@@ -8,8 +8,9 @@ export const Wrapper = styled.div`
   align-items: center;
 `
 
-export const CardsContainer = styled.div`
+export const LinkContainer = styled.div`
   display: flex;
-  margin-top: 32px;
-  gap: 50px;
+  justify-content: start;
+  width: 100%;
+  margin-bottom: 32px;
 `

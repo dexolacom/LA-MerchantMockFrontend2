@@ -9,3 +9,10 @@ export interface CardProps {
   price: string
   setIsSubPurchased: (b: boolean) => void
 }
+
+export interface NftCardProps {
+  card: {
+    id: number
+    type: string
+  }
+}

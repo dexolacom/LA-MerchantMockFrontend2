@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -16,6 +17,11 @@ export const InputsContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
+
 `
 
 export const Input = styled.input`
@@ -27,5 +33,27 @@ export const Input = styled.input`
 
   ::-webkit-input-placeholder {
     color: #80a8c9;
+  }
+`
+
+export const TitleContainer = styled.div`
+  display: flex;
+  gap: 40px;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
+  
+`
+
+export const RouterNavLink = styled(NavLink)`
+  text-decoration: none;
+  color: #2c3f57;
+  font-weight: 600;
+
+  &.active {
+    color: #ff3e1d;
+    text-decoration: underline;
   }
 `
