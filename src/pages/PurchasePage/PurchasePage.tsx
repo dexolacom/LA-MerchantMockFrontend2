@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Title, Text, Link } from '../../components/theme'
-import { Wrapper } from './styles';
+import { Wrapper, LinkContainer } from './styles';
 import { LoginProps } from '../../components/types';
 import { getUrl } from '../../components/utils';
 import Cards from '../../components/Cards/Cards';
@@ -23,7 +23,9 @@ const PurchasePage:React.FC<LoginProps> = ({ isUserLogged, setIsUserLogged }) =>
             <Link href={getUrl()} target='_blank'>Transform to NFT</Link>
           </>
           : <>
-            <Link margin='0 0 48px 0' href={getUrl('activate')} target='_blank'>Activate subscription with LA</Link>
+            <LinkContainer>
+              <Link href={getUrl('activate')} target='_blank'>Activate subscription with LA</Link>
+            </LinkContainer>
             <Title margin={0}>Choose your plan</Title>
             {/*@ts-ignore*/}
             <Cards setIsSubPurchased={setIsSubPurchased}/>

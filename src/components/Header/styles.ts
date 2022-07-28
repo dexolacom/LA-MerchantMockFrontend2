@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -27,5 +28,22 @@ export const Input = styled.input`
 
   ::-webkit-input-placeholder {
     color: #80a8c9;
+  }
+`
+
+export const TitleContainer = styled.div`
+  display: flex;
+  gap: 40px;
+  align-items: center;
+`
+
+export const RouterNavLink = styled(NavLink)`
+  text-decoration: none;
+  color: #2c3f57;
+  font-weight: 600;
+
+  &.active {
+    color: #ff3e1d;
+    text-decoration: underline;
   }
 `

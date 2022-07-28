@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Title } from '../theme';
-import { Wrapper, Content, InputsContainer, Input } from './styles';
+import { Wrapper, Content, InputsContainer, Input, RouterNavLink, TitleContainer } from './styles';
 import { LoginProps } from '../types';
 
 
@@ -39,7 +39,12 @@ const Header:React.FC<LoginProps> = ({isUserLogged, setIsUserLogged}) => {
   return (
     <Wrapper>
       <Content>
-        <Title fontSize={'22px'} margin={0}>Awesome merchant</Title>
+        <TitleContainer>
+          <Title fontSize={'22px'} margin={0}>Awesome merchant</Title>
+          <RouterNavLink to='/'>Purchase</RouterNavLink>
+          <RouterNavLink to='/nfts'>Nfts</RouterNavLink>
+        </TitleContainer>
+
         {isUserLogged
           ? <InputsContainer>
             <span>{userName}</span>
