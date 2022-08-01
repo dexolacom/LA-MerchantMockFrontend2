@@ -9,7 +9,7 @@ const encryptParams = (str: string) => {
 }
 
 export const getUrl = (activate?: string) => {
-  let urlParams = `userId=${id()}&merchantId=1`
+  let urlParams = `userId=${id()}&merchantId=2`
 
   const encryptedLink = encryptParams(urlParams)
 
