@@ -1,4 +1,3 @@
-import AES from 'crypto-js/aes';
 
 const id = () => Math.floor(Math.random() * 1011)
 
