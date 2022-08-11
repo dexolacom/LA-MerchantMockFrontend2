@@ -12,7 +12,7 @@ export const Content = styled.div`
   padding: 1em 2em;
 `
 
-export const InputsContainer = styled.div`
+export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,11 +49,11 @@ export const TitleContainer = styled.div`
 
 export const RouterNavLink = styled(NavLink)`
   text-decoration: none;
-  color: #2c3f57;
+  color: #dee2ee;
   font-weight: 600;
 
   &.active {
-    color: #ff3e1d;
+    color: #317ccc;
     text-decoration: underline;
   }
 `
