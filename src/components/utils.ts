@@ -21,7 +21,7 @@ export const getUrl = (activate?: string) => {
   const currentDatePlusTwoMouths = new Date(currentDate.setMonth(currentDate.getMonth()+2))
   const linkExpiredDate = Math.floor(currentDatePlusTwoMouths.getTime() / 1000)
 
-  let urlParams = `userId=${userId}&merchantId=1&expirationDate=${linkExpiredDate}`
+  let urlParams = `userId=${userId}&merchantId=2&expirationDate=${linkExpiredDate}`
 
   const encryptedLink = cryptUrlParams('somesuncreatecargalaxyeasygovermentceleniumproduction', urlParams)
 
